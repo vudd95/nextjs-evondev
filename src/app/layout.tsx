@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { fontOnLocal, manrope, roboto } from "@/components/font";
+import { manrope } from "@/ultis";
+import Sidebar from "@/components/layout/Sidebar";
 
 export const metadata: Metadata = {
   title: "Ucademy",
@@ -14,10 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} ${roboto.variable} font-primary`}>
-        {children}
+      <body className={manrope.className}>
+        <div className="wrapper grid grid-cols-[300px_minmax(0,_1fr)] h-screen">
+          <Sidebar />
+          <main>{children}</main>
+        </div>
       </body>
-      {/* <body className={fontOnLocal.className}>{children}</body> */}
     </html>
   );
 }

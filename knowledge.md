@@ -44,3 +44,26 @@
     display: "swap",
   });
   ```
+
+# TypeScript
+
+- `ComponentProps<"svg">`: sẽ lấy ra các props của thẻ svg
+
+# Next/link
+
+- Link
+- href: đường dẫn, có thể điền vào chuỗi hoặc object
+
+```js
+<Link href={{ path: "urlName", query: "queryName" }}></Link>
+```
+
+- replace: chỉ thay thế đường dẫn chứ không lưu lại lịch sử (khi ấn back lại không quay lại trang trước đó mình vào)
+- scroll: mặc định là true, nghĩa là khi ấn link thì sẽ scroll lên trên cùng -> nếu không muốn scroll thì sẽ scroll = false
+- prefetch: Khi thẻ <Link> xuất hiện trên viewport thì link trong href của thẻ link sẽ được load trước (chạy ngầm). Giúp cho việc điều huớng trở nên mượt mà (chạy trên production)
+
+# Kiến thức:
+
+# Errors:
+
+- You're importing a component that needs `usePathname`. It only works in a Client Component but none of its parents are marked with "use client", so they're Server Components by default. => Sử dụng hook `usePathName` thì có nghĩa file này sử dụng client
