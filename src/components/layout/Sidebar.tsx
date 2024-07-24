@@ -1,12 +1,8 @@
 // "use client";
 import React from "react";
-import IconPlay from "../icons/IconPlay";
-import IconExplore from "../icons/IconExplore";
-import IconCategory from "../icons/IconCategory";
 import { menuItems } from "@/constants";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import ActiveLink from "../common/ActiveLink";
+import { TMenuItem } from "@/types";
 
 const Sidebar = () => {
   return (
@@ -32,15 +28,7 @@ const Sidebar = () => {
 };
 
 // component MenuItem
-function MenuItem({
-  url = "/",
-  title = "",
-  icon,
-}: {
-  url: string;
-  title: string;
-  icon?: React.ReactNode;
-}) {
+function MenuItem({ url = "/", title = "", icon }: TMenuItem) {
   return (
     <li>
       <ActiveLink url={url}>

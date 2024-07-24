@@ -61,6 +61,7 @@
 - replace: chỉ thay thế đường dẫn chứ không lưu lại lịch sử (khi ấn back lại không quay lại trang trước đó mình vào)
 - scroll: mặc định là true, nghĩa là khi ấn link thì sẽ scroll lên trên cùng -> nếu không muốn scroll thì sẽ scroll = false
 - prefetch: Khi thẻ <Link> xuất hiện trên viewport thì link trong href của thẻ link sẽ được load trước (chạy ngầm). Giúp cho việc điều huớng trở nên mượt mà (chạy trên production)
+- hook `usePathname()` tra ra pathname giup chung ta xu ly nhung truong hop ma chung ta muon nhu la active-link
 
 # Kiến thức:
 
